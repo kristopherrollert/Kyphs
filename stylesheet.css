@@ -1,7 +1,105 @@
-#cervical-svg, #thoracic-svg, #lumbar-svg{
-  width:6%;
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #29ab94;
+    background: -webkit-linear-gradient(45deg,#39b564 ,#29ab94);
+    background: -o-linear-gradient(45deg,#39b564 ,#29ab94);
+    background: -moz-linear-gradient(45deg,#39b564 ,#29ab94);
+    background: linear-gradient(45deg, #39b564,#29ab94);
+}
+
+.sad-header-box{
+  background-color: #2a363b;
+}
+.sad-header{
+  text-align: center;
+  margin:0;
+  font-family: "futura-pt-n8", "futura-pt";
+  font-size: 3em;
+  color:white;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+}
+
+.success-box{
+  height:25px;
+  width:25px;
+  background-color: #2a363b;
+  float:left;
+  margin-top: 28px;
+}
+.sad-subheader-subtext{
+  font-weight: 500;
+  font-size: .7em;
+  padding-left: 20px;
+}
+.sad-subheader{
+  margin-bottom: 5px;
+  font-size: 1.8em;
+}
+
+.sad-analysis-text{
+  margin-top: 0;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.1em;
+}
+.column-left{
+  width:10%;
+  float:left;
+  display: flex;
+  justify-content: center;
+}
+.column-mid{
+  width:65%;
   float:left;
 }
+.column-right{
+  width:25%;
+  float:right;
+  text-align: center;
+  height:100%;
+}
+.spinal-analysis{
+  font-family: "futura-pt";
+  height: 100%;
+  width: 100%;
+  display:inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.spinal-display, .spinal-analysis-desc{
+  background-color: white;
+  display: inline-block;
+}
+
+.percentage-text{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+.spinal-display{
+  margin-left:3%;
+  padding:19px;
+  border-left: 22px solid #2a363b;
+}
+.lumbar-row, .cervical-row{
+  display:inline-block;
+}
+
+.lumbar-row, .cervical-row{
+  background-color: #f4f4f4;
+}
+
 .cervical-container, .thoracic-container, .lumbar-container{
     display:block;
 }
@@ -15,4 +113,26 @@
     fill:none;
     stroke:#fff;
     stroke-width:3px;
+}
+#thoracic-svg{
+  padding-left: 41px;
+}
+#lumbar-svg{
+  padding-left: 68px;
+}
+#cervical-svg{
+  padding-left: 65px;
+}
+.spinal-display-table{
+  white-space: nowrap;
+}
+#cervical-column {
+  white-space: nowrap;
+}
+.sd-left-col{
+  float:left;
+}
+.sd-right-col{
+  margin-left: 120px;
+  float:right;
 }
