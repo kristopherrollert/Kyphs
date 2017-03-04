@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="/socket.io/socket.io.js"></script>
+  
+  </head> 
+  <body>
+    <p id = "sayHello"></p>
+  
+  </script>
+  <script>
+    var socket = io()
+
+    socket.on('connect', function(data) {
+        socket.emit('join', 'Client is connected!');
+        document.getElementById('sayHello').innerHTML = "Hello World Dude Guy";
+    });
+    socket.on('turn', function(data){
+      document.write(data + "<br>");
+    });
+  </script>
+  <!-- <script type="text/javascript" src="./client.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAFplIrdlZ03GGTMUwHen9yjkXwR4qhf8g",
+      authDomain: "habitus-cb41b.firebaseapp.com",
+      databaseURL: "https://habitus-cb41b.firebaseio.com",
+      storageBucket: "habitus-cb41b.appspot.com",
+      messagingSenderId: "889800309026"
+    };
+    var defaultApp = firebase.initializeApp(config);
+    console.log(defaultApp.name);  // "[DEFAULT]"
+  </script>
+  </body>
+</html>
