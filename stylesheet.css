@@ -27,13 +27,14 @@ body {
 
 }
 
-.success-box{
+#sb-cervical, #sb-thoracic, #sb-lumbar{
   height:25px;
   width:25px;
-  background-color: #2a363b;
   float:left;
   margin-top: 28px;
+  background-color: #2a363b;
 }
+
 .sad-subheader-subtext{
   font-weight: 500;
   font-size: .7em;
@@ -135,4 +136,19 @@ body {
 .sd-right-col{
   margin-left: 120px;
   float:right;
+}
+#cervical-identify, #thoracic-identify, #lumbar-identify{
+  margin-bottom:0;
+  padding-left: 90px;
+    border-bottom: 3px solid black;
+    text-align: right;
+}
+#cervical-identify{
+  padding-top: 30px;
+}
+#thoracic-identify{
+  padding-top: 110px;
+}
+#lumbar-identify{
+  padding-top: 110px;
 }
