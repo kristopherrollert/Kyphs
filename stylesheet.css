@@ -1,0 +1,18 @@
+#cervical-svg, #thoracic-svg, #lumbar-svg{
+  width:6%;
+  float:left;
+}
+.cervical-container, .thoracic-container, .lumbar-container{
+    display:block;
+}
+.cervical-main, .thoracic-main, .lumbar-main{
+  fill:#2a363b;
+  stroke:#2a363b;
+  stroke-width:40px;
+}
+.cervical-main,.cervical-divider, .thoracic-main, .thoracic-divider, .lumbar-main, .lumbar-divider{stroke-miterlimit:10;}
+.cervical-divider, .thoracic-divider, .lumbar-divider{
+    fill:none;
+    stroke:#fff;
+    stroke-width:3px;
+}
