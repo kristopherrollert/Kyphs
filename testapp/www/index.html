@@ -9,6 +9,7 @@
   <script src="https://use.typekit.net/dzm8vkq.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <script src="/socket.io/socket.io.js"></script>
+  
 </head>
 <body>
   <div class="spinal-analysis">
@@ -149,46 +150,34 @@
   <!-- <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase-database.js"></script> -->
   <script src="initFirebase.js"></script>
   <script src="fs.js"></script>
-
   <script>
+    var socket = io()
 
-    var socket = io.connect(window.location.hostname + ':' + 3000);
-
-    socket.on('connection', function(data) {
+    socket.on('connect', function(data) {
         socket.emit('join', 'Client is connected!');
     });
     socket.on('turn', function(data){
-      if(data[0] > 404){
+      if(data[0] >= 0  && data[0] < 3){
         changeCervicalColor("4cb749");
         changeThoracicColor();
         changeLumbarColor();
+      }else if(data[0] >= 3 && data[0] < 7){
+        changeThoracicColor("e23031");
+        changeCervicalColor();
+        changeLumbarColor();
+      }else{
+        changeLumbarColor("fcd209");
+        changeCervicalColor();
+        changeThoracicColor();
       }
-      //console.log("A0:" + data[0]);
-      //pushNewUserData("Khoa", data[0], data[1], data[2]);
-
+      
+      //pushNewUserData("Khoa", data[0], data[1])
     });
     
     socket.on('turn2', function(data){
-      if(data[1] < 501){
-        changeCervicalColor();
-        changeThoracicColor("e23031");
-        changeLumbarColor();
-      }
-      console.log("A1:" + data[1])
-      //pushNewUserData("James", data[0], data[1], data[2]);
-      
-    });
-    
-    socket.on('turn3', function(data){
-      if(data[2] > 300){
-        changeCervicalColor();
-        changeThoracicColor();
-        changeLumbarColor("fcd209");
-      }
-      //console.log("A5:" + data[2]);
-      //pushNewUserData("Tame", data[0], data[1], data[2]);
+      //pushNewUserData("James", data[0], data[1])
     });
   </script>
-
+  
 </body>
 </html>
